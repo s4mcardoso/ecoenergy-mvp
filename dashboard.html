@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EcoEnergy Monitor - Dashboard</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+    
+    <style>
+        /* Define a cor verde (eco) como cor primária do Pico */
+        :root {
+            --pico-primary: #4CAF50; 
+            --pico-primary-hover: #45a049;
+            --pico-primary-focus: rgba(76, 175, 80, 0.25);
+        }
+        /* Deixa o card do "Sistema 01" mais bonito */
+        article img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: var(--pico-border-radius);
+            margin-bottom: var(--pico-spacing);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="container-fluid">
+        <ul>
+            <li><strong>EcoEnergy Monitor</strong></li>
+        </ul>
+        <ul>
+            <li><a href="/">Dashboard</a></li>
+            <li><a href="#">Relatórios</a></li>
+            <li><a href="#" role="button" class="secondary">Sair</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <header>
+            <h1 style="color: var(--pico-primary);">Meu Dashboard</h1>
+            <p>Seja bem-vindo. Este é o resumo do seu sistema de energia solar.</p>
+        </header>
+
+        <div class="grid">
+            <article style="text-align: center;">
+                <h3 style="margin-bottom: 0;">R$ 1.250,80</h3>
+                <p style="color: var(--pico-muted-color);">Economia Total</p>
+            </article>
+            
+            <article style="text-align: center;">
+                <h3 style="margin-bottom: 0;">580 kWh</h3>
+                <p style="color: var(--pico-muted-color);">Geração (Este Mês)</p>
+            </article>
+
+            <article style="text-align: center;">
+                <h3 style="margin-bottom: 0;">18 meses</h3>
+                <p style="color: var(--pico-muted-color);">Tempo de Payback</p>
+            </article>
+        </div>
+
+        <h2>Meus Sistemas</h2>
+        <article>
+             <img src="https://images.unsplash.com/photo-1509391366360-2e959784a034?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=1080" alt="Painel Solar">
+            
+            <header>
+                <strong>Sistema 01 (Casa)</strong>
+            </header>
+            
+            <p>Instalado em: 20/05/2024. Potência: 8.2 kWp</p>
+            
+            <footer>
+                <button>Ver Relatório Detalhado</button>
+            </footer>
+        </article>
+    </main>
+
+    <footer class="container">
+        <small>EcoEnergy Monitor &copy; 2025 - Projeto MVP</small>
+    </footer>
+
+</body>
+</html>
